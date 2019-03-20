@@ -99,7 +99,7 @@ public class DemotywatoryPageScrapper implements PageScrapper {
 
         // Get url
         Elements urlElements = demot.getElementsByClass("demot_link");
-        url = ROOT_URL + urlElements.attr("href");
+        url = urlElements.attr("href");
 
         return Optional.of(new Meme(title, content, url, description, getComments(demot), getVotes(demot)));
     }
