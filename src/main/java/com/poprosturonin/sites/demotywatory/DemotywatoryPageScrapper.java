@@ -89,7 +89,7 @@ public class DemotywatoryPageScrapper implements PageScrapper {
 
         //Get content
         Elements contentElement = demot.getElementsByTag("source");
-        content = new VideoContent(ROOT_URL + contentElement.attr("src"));
+        content = new VideoContent(contentElement.attr("src"));
 
         // Get title
         title = demot.getElementsByClass("demot_title").text();
@@ -99,7 +99,7 @@ public class DemotywatoryPageScrapper implements PageScrapper {
 
         // Get url
         Elements urlElements = demot.getElementsByClass("demot_link");
-        url = urlElements.attr("href");
+        url = ROOT_URL + urlElements.attr("href");
 
         return Optional.of(new Meme(title, content, url, description, getComments(demot), getVotes(demot)));
     }
