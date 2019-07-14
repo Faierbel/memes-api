@@ -9,8 +9,6 @@ Currently supports:
 * [jbzd.pl](https://jbzdy.pl)
 * [9gag.com](http://9gag.com)
 
-No sites to be supported, suggest one?
-
 ## API
 `/`
 
